@@ -1,0 +1,21 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+@use "sass:math";
+
+.recommended__homepage {
+  .recommended {
+    &__top-buttons {
+      display: none;
+    }
+
+    &__button-btn {
+      display: none;
+    }
+
+    &-card {
+      &:nth-last-child(-n+3) {
+        display: none;
+      }
+    }
+  }
+}

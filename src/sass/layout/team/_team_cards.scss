@@ -1,0 +1,95 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+@use "sass:math";
+
+.team-page {
+  margin-top: -50px;
+  padding-top: 132px;
+
+  @include tablet-sd {
+    padding-top: 280px;
+  }
+
+  @include tablet-hd {
+    padding-top: 176px;
+  }
+
+  &__wrapper {
+    padding-bottom: $baseIndent;
+  }
+
+  .team-page__title {
+    @include tablet-hd {
+      padding-right: calc($baseIndent * 2);
+      padding-left: calc($baseIndent * 2);
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: calc($baseIndent / 2);
+    gap: calc($baseIndent / 2);
+
+    @include tablet-sd {
+      padding-top: $baseIndent;
+      gap: $baseIndent;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include tablet-hd {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__card {
+    &-photo {
+      display: flex;
+      overflow: hidden;
+      border-radius: 12px;
+      height: 300px;
+
+      @include tablet-sd {
+        height: 400px;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-text {
+      position: relative;
+      margin-top: calc($baseIndent / 4);
+      display: flex;
+      flex-direction: column;
+
+      .full_name {
+        color: $main-color-regular;
+      }
+
+      .job_title {
+        margin-top: 5px;
+      }
+
+      .btn-more {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      &:hover {
+        .full_name {
+          color: $accent-color;
+        }
+
+        .btn-more {
+          fill: #EDEDF7;
+          stroke: $accent-color;
+        }
+      }
+    }
+  }
+}

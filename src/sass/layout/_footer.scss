@@ -1,0 +1,163 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use "sass:math";
+
+.footer {
+  background-color: $grey-color-bg;
+
+  &__items {
+    display: grid;
+    padding: calc($baseIndent / 2);
+    grid-template-areas:
+      "place"
+      "contacts"
+      "promo";
+    align-self: center;
+
+    border-top: 2px solid $grey-color-separator;
+
+    @include tablet-sd {
+      padding-right: 0;
+      padding-left: 0;
+      grid-row-gap: calc($baseIndent / 3);
+      grid-template-areas:
+        "place promo"
+        "contacts contacts";
+    }
+
+    &-place {
+      margin-bottom: 21px;
+      text-align: center;
+      grid-area: place;
+
+      @include tablet-sd {
+        display: flex;
+        margin-bottom: 0;
+        align-items: center;
+      }
+
+      .adress {
+        margin-bottom: calc($baseIndent / 6);
+
+        @include tablet-sd {
+          margin-bottom: 0;
+        }
+      }
+
+      .map {
+        &::before {
+          content: "";
+
+          display: none;
+          width: 6px;
+          height: 6px;
+          margin-right: 10px;
+          margin-left: 10px;
+
+          background: $grey-color-text;
+          border-radius: 50%;
+
+          @include tablet-sd {
+            display: flex;
+          }
+        }
+
+        &::after {
+          content: "";
+
+          display: none;
+          width: 6px;
+          height: 6px;
+          margin-right: 10px;
+          margin-left: 10px;
+
+          background: $grey-color-text;
+          border-radius: 50%;
+
+          @include tablet-sd {
+            display: flex;
+          }
+        }
+      }
+    }
+
+    &-contacts {
+      display: flex;
+      margin-bottom: calc($baseIndent / 2);
+      gap: calc($baseIndent / 6);
+      align-items: center;
+      grid-area: contacts;
+      flex-direction: column;
+
+      @include tablet-sd {
+        margin-bottom: 0;
+        gap: 0;
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+
+      .call {
+        display: flex;
+
+        &::before {
+          content: "";
+
+          display: none;
+          width: 6px;
+          height: 6px;
+          margin-right: 10px;
+          margin-left: 10px;
+
+          background: $grey-color-text;
+          border-radius: 50%;
+
+          @include tablet-sd {
+            display: flex;
+            align-self: center;
+          }
+        }
+
+        &::after {
+          content: "";
+
+          display: none;
+          width: 6px;
+          height: 6px;
+          margin-right: 10px;
+          margin-left: 10px;
+
+          background: $grey-color-text;
+          border-radius: 50%;
+
+          @include tablet-sd {
+            display: flex;
+            align-self: center;
+          }
+        }
+      }
+
+      .mail {
+        display: flex;
+      }
+    }
+
+    &-promo {
+      margin-right: math.div(-$baseIndent, 6);
+      margin-left: math.div(-$baseIndent, 6);
+      grid-area: promo;
+
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 400;
+      text-align: center;
+
+      color: $grey-color-text;
+
+      @include tablet-sd {
+        margin: 0;
+
+        text-align: end;
+      }
+    }
+  }
+}

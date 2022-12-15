@@ -1,0 +1,274 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+h1,
+h2,
+h3,
+p,
+span {
+  margin: 0;
+
+  color: #FFFFFF;
+}
+
+.primary_title {
+  font-size: 38px;
+  line-height: 46px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.gradient_title {
+  font-size: 30px;
+  line-height: 37px;
+  font-weight: 700;
+  align-self: stretch;
+
+  background: $redText-color-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @include tablet-sd {
+    font-size: 38px;
+    line-height: 46px;
+  }
+}
+
+.header__contacts-adress {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: right;
+
+  color: $grey-color-text;
+}
+
+.experience_title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+
+  align-self: stretch;
+
+  @include tablet-sd {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.experience_text {
+  font-size: 19px;
+  line-height: 30px;
+  font-weight: 400;
+  align-self: stretch;
+}
+
+.comparison-card_title {
+  font-size: 22px;
+  line-height: 27px;
+  font-weight: 700;
+
+  color: $active-color-regular;
+
+  transition: $baseAnimation;
+
+  &:hover {
+    color: $accent-color;
+
+    cursor: pointer;
+  }
+}
+
+.comparison-card_text {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  align-self: stretch;
+}
+
+.clients-title {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: $main-color-regular;
+}
+
+.recommended-card_title {
+  display: flex;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+
+  color: $active-color-regular;
+ 
+  transition: $baseAnimation;
+
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+.recommended-card-date {
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: $grey-color-text;
+}
+
+.recommended-card_describe {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+
+  color: #000000;
+  border-top: 4px solid #E6E6F0;
+  ;
+}
+
+.is-active-item,
+.is-active-item_cons,
+.is-active-item_cust,
+.is-active-item_inno,
+.is-active-item_busi {
+  background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.suptitle {
+  display: flex;
+  padding: 0;
+
+  &-text {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: $active-color-regular;
+
+    transition: $baseAnimation;
+  }
+
+  &-icon {
+    width: 12px;
+    height: 12px;
+
+    stroke: $active-color-regular;
+    fill: none;
+    
+    transition: $baseAnimation;
+  }
+
+  &:hover .suptitle-text {
+    color: $accent-color;
+    
+    & .suptitle-icon {
+      stroke: $accent-color;
+    }
+  }
+}
+
+.full_name {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+
+  color: $grey-color-text;
+}
+
+.job_title {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+
+  color: $grey-color-text;
+}
+
+.adress {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+
+  color: $main-color-regular;
+
+  @include tablet-sd {
+    margin-bottom: 0;
+  }
+}
+
+.map {
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: $active-color-regular;
+
+  transition: $baseAnimation;
+
+  &:hover {
+    color: $accent-color;
+  }
+
+  @include tablet-sd {
+    display: flex;
+    padding-top: 1px;
+    align-items: center;
+
+    line-height: 10px;
+  }
+
+  @include tablet-hd {
+    line-height: 0px;
+  }
+}
+
+.call {
+  display: flex;
+
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: right;
+
+  color: $main-color-alt;
+
+  transition: $baseAnimation;
+
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+.mail {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+
+  color: $active-color-regular;
+
+  transition: $baseAnimation;
+
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+.form__help-text {
+font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: $grey-color-text;
+}

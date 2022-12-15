@@ -1,0 +1,81 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  &-item {
+    display: flex;
+    min-height: 32px;
+
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 400;
+
+    color: #FFFFFF;
+
+    @include tablet-sd {
+      min-height: 60px;
+
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    &::before {
+      content: url(../img/Slash_small.svg);
+
+      display: flex;
+      margin-right: 4px;
+      margin-left: 4px;
+
+      @include tablet-sd {
+        content: url(../img/Slash.svg);
+      }
+    }
+
+    &:first-child {
+      &::before {
+        content: '';
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+
+  .header-logo {
+    &_link {
+      display: flex;
+      width: 70px;
+      height: 32px;
+
+      cursor: pointer;
+
+      .header-logo_icon {
+        height: 100%;
+
+        --logoColor: #fff;
+      }
+
+      @include tablet-sd {
+        width: 130px;
+        height: 60px;
+      }
+    }
+  }
+}
+
+.white-header {
+  .breadcrumbs {
+    &-item {
+      color: $main-color-regular;
+    }
+
+    .header-logo {
+      &_icon {
+        --logoColor: #323264;
+      }
+    }
+  }
+}

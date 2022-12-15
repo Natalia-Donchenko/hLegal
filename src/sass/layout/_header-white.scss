@@ -1,0 +1,64 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use "sass:math";
+
+.white-header {
+  .header {
+    &__contacts {
+      &-adress {
+        &:hover {
+          color: $accent-color;
+        }
+      }
+
+      &-call {
+        color: $grey-color-text;
+        transition: $baseAnimation;
+
+        &:hover {
+          color: $accent-color;
+        }
+      }
+
+      &::before {
+        background-color: $grey-color-bg;
+
+        @include tablet-sd {
+          content: none;
+        }
+      }
+    }
+
+    .is-shown__menu {
+      display: flex;
+    }
+
+    &__menu {
+      &-list {
+        &_items {
+          color: $active-color-regular;
+
+          .menu-item {
+            & a {
+              color: $active-color-regular;
+
+              transition: $baseAnimation;
+
+              &:hover {
+                color: $accent-color;
+
+                cursor: pointer;
+              }
+            }
+
+            &:hover::after {
+              height: 2px;
+
+              background-color: $accent-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

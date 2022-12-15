@@ -1,0 +1,308 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.langswitcher {
+  display: flex;
+  gap: 7px;
+
+  &__language {
+    padding: 5px 7px;
+
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    border-radius: 8px;
+
+    transition: $baseAnimation;
+
+    @include tablet-hd {
+      line-height: 11px;
+    }
+
+    &:hover {
+      color: $grey-color-text;
+      background-color: $grey-color-bg;
+    }
+  }
+
+  .is-active_ua,
+  .is-active_ru,
+  .is-active_en {
+    background-color: $accent-color;
+  }
+}
+
+.white-header {
+  .langswitcher {
+    &__language {
+      color: $grey-color-text;
+
+      &:hover {
+        background-color: white;
+
+        @include tablet-sd {
+          background-color: $grey-color-bg;
+        }
+      }
+    }
+  }
+}
+
+.burger {
+  position: relative;
+  z-index: 1;
+
+  width: 32px;
+  height: 32px;
+  padding: 0;
+
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: $baseAnimation;
+
+  &-icon {
+    width: 100%;
+
+    stroke: #ffffff;
+  }
+
+  &:hover {
+    --burgerColor: #323264;
+    background-color: $grey-color-separator;
+  }
+}
+
+.white-header {
+  .burger {
+    &-icon {
+      stroke: $main-color-regular;
+    }
+  }
+}
+
+.close {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: all 0.1s linear;
+
+  &-icon {
+    width: 100%;
+
+    --closeColor: #EC6F5D;
+  }
+
+  &:hover {
+    background-color: $grey-color-separator;
+  }
+}
+
+.btn-scroll {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+
+  background: transparent;
+  border: 0;
+  stroke: #fff;
+  fill: none;
+
+  transition: $baseAnimation;
+
+  &_icon {
+    width: 100%;
+  }
+
+  &:hover {
+    stroke: $accent-color;
+
+    cursor: pointer;
+  }
+}
+
+.header-fb {
+  display: flex;
+  padding: 0;
+
+  background: transparent;
+  border: none;
+  width: 24px;
+  height: 24px;
+
+  &_icon {
+    width: 100%;
+    fill: #fff;
+    transition: $baseAnimation;
+
+    &:hover {
+      fill: $accent-color;
+    }
+  }
+}
+
+.white-header {
+  .header-fb {
+    &_icon {
+      fill: $grey-color-text;
+
+      &:hover {
+        fill: $accent-color;
+      }
+    }
+  }
+}
+
+.fb-link {
+  display: flex;
+  padding: 0;
+
+  background: transparent;
+  border: none;
+
+  width: 38px;
+  height: 38px;
+
+  .fb_icon {
+    width: 100%;
+
+    fill: $active-color-regular;
+
+    transition: $baseAnimation;
+
+    &:hover {
+      fill: $accent-color;
+    }
+  }
+}
+
+.recommended__top-buttons {
+  display: flex;
+  width: max-content;
+  padding: 2px;
+
+  background: $grey-color-separator;
+  border-radius: 12px;
+
+  .btn-news {
+    padding: 9px 30px;
+
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    text-align: center;
+
+
+    color: $main-color-regular;
+    background-color: #fff;
+
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+  }
+
+  .btn-articles {
+    padding: 9px 30px;
+
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    text-align: center;
+
+    color: $main-color-regular;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: $grey-color-bg;
+    }
+  }
+}
+
+.recommended__button-btn {
+  display: flex;
+  width: max-content;
+  padding: 18px 30px;
+  justify-content: center;
+
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+
+  color: #FFFFFF;
+  background-color: $active-color-regular;
+  border: none;
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: $active-color-hover;
+  }
+}
+
+.form__help-btn {
+  display: flex;
+  padding: 18px;
+  justify-content: center;
+
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+
+  color: #FFFFFF;
+  background-color: $active-color-regular;
+  border: none;
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: $active-color-hover;
+  }
+}
+
+.btn-more {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+
+  --btnMoreCircleColor: none;
+  stroke: $active-color-regular;
+  fill: $grey-color-bg;
+  background: transparent;
+  border: none;
+
+  transition: $baseAnimation;
+
+  cursor: pointer;
+
+  &_icon {
+    width: 100%;
+  }
+
+  :hover {
+    fill: $grey-color-bgAlt;
+    stroke: $accent-color;
+  }
+}

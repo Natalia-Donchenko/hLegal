@@ -1,0 +1,31 @@
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+
+@use 'vendor/swiper';
+
+@use 'base/normalize';
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/container';
+
+@use 'layout/homePage/homepage_header';
+@use 'layout/homePage/homepage_team';
+@use 'layout/homePage/homePage_sections';
+@use 'layout/services/services_header';
+@use 'layout/publications/publications_header';
+@use 'layout/publications/publicationsd_recommended';
+@use 'layout/contact/contact_header';
+@use 'layout/contact/contact_contacts';
+@use 'layout/team/team_header';
+@use 'layout/team/team_cards';
+@use 'layout/footer';
+@use 'layout/header';
+@use 'layout/header-white';
+@use 'layout/clients';
+@use 'layout/recommended';
+@use 'layout/comparison';
+
+@use 'components/btn';
+@use 'components/titles';
+@use 'components/breadcrumbs';
+@use 'components/form_help';

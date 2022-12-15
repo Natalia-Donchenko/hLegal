@@ -1,0 +1,39 @@
+@use '../abstracts/variables' as *;
+
+@mixin mobile {
+  @media (min-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet-sd {
+  @media (min-width: $tablet-sd) {
+    @content;
+  }
+}
+
+@mixin tablet-hd {
+  @media (min-width: $tablet-hd) {
+    @content;
+  }
+}
+
+@mixin desktop-sd {
+  @media (min-width: $desktop-sd) {
+    @content;
+  }
+}
+
+@mixin desktop-hd {
+   @media (min-width: $desktop-hd) {
+    @content;
+  }
+}
+
+@mixin rotate {
+  @media (max-height: $rotate) {
+   @content;
+ }
+}
+
+

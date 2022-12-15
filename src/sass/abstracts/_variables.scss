@@ -1,0 +1,35 @@
+$mobile: 375px;
+$tablet-sd: 768px;
+$tablet-hd: 1024px;
+$desktop-sd: 1440px;
+$desktop-hd: 1920px;
+$rotate: 500px;
+
+$baseFontSize: 20px;
+
+$baseIndent: 60px;
+
+$baseAnimation: all 0.3s linear;
+
+
+$main-color-regular: #323264;
+$main-color-alt: #46466E;
+$main-color-soft: #686887;
+
+$accent-color: #F0145A;
+
+$active-color-regular:#24A3FF;
+$active-color-hover:#0085FF;
+$active-color-active:#006CCF;
+
+$grey-color-bg:#F5F5FA;
+$grey-color-bgAlt:#EDEDF7;
+$grey-color-text:#B3B3BA;
+$grey-color-separator:#E6E6F0;
+
+$main-color-gradient: linear-gradient(128.63deg, #323264 0%, #323264 73.96%, #A54B5F 100%);
+$soft-color-gradient: linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
+$red-color-gradient: linear-gradient(323.35deg, #F0145A 6.7%, #693264 70.36%);
+$supersoft-color-gradient: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+$redText-color-gradient: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+

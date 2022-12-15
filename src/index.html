@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hlegal</title>
+  <link rel="stylesheet" href="@@webRoot/css/main.min.css">
+</head>
+
+<body>
+
+  <div class="homepage-header">
+    <div class="homepage-header__wrapper">
+      <div class="container">
+        <div class="homepage-header__hero">
+
+          @@include('sections/header.html')
+
+          <div class="homepage-header__hero-title">
+            <h1 class="primary_title">you legal solutions provider</h1>
+            <button class="btn-scroll">
+              <svg class="btn-scroll_icon" viewBox="0 0 42 42">
+                <use xlink:href="#scroll"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="homepage-header__experience">
+          <ul class="homepage-header__experience-list" id="experience-list">
+            <li class="list-item is-active-item" id="item-cons"><a href="#"></a>Consistent</li>
+            <li class="list-item" id="item-cust"><a href="#"></a>Customer oriented</li>
+            <li class="list-item" id="item-inno"><a href="#"></a>Innovative</li>
+            <li class="list-item" id="item-busi"><a href="#"></a>Business oriented</li>
+          </ul>
+
+          <div class="homepage-header__experience-describe">
+            <h3 class="experience_title">We turn the idea of legal services</h3>
+            <p class="experience_text">Consolidating many years of experience and practice, the company's lawyers
+              accompany complex projects and
+              achieve a number of important decisions for the industry. Many of them form the practice of applying the
+              law
+              of the sea in Ukraine.</p>
+          </div>
+        </div>
+
+        @@include('sections/compration.html')
+
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <section class="team">
+      <div class="container">
+        <div class="team__cards swiper">
+          <div class="swiper-wrapper">
+
+            <div class="team__cards-card swiper-slide">
+              <div class="team__cards-card_photo">
+                <img class="team_photo" src="@@webRoot/img/Team/TeamPhoto-1.jpg" alt="man">
+              </div>
+              <div class="team__cards-card_text">
+                <div class="suptitle">
+                  <a class="suptitle-text" href="#">команда
+                    <svg class="suptitle-icon" viewBox="0 0 8 11">
+                      <use xlink:href="#suptitle-icon"></use>
+                    </svg>
+                  </a>
+                </div>
+                <h2 class="gradient_title">Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну
+                  допомогу, навіть у ситуаціях, коли більшість безсилі.</h2>
+                <div class="full_name">Олександр Олександровський</div>
+                <div class="job_title">Керуючий партнер</div>
+              </div>
+            </div>
+
+            <div class="team__cards-card swiper-slide">
+              <div class="team__cards-card_photo">
+                <img class="team_photo" src="@@webRoot/img/Team/TeamPhoto-5.jpg" alt="woman">
+              </div>
+              <div class="team__cards-card_text">
+                <a class="suptitle" href="#">команда</a>
+                <h2 class="gradient_title">Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну
+                  допомогу, навіть у ситуаціях, коли більшість безсилі.</h2>
+                <div class="full_name">Олександр Олександровський</div>
+                <div class="job_title">Керуючий партнер</div>
+              </div>
+            </div>
+
+            <div class="team__cards-card swiper-slide">
+              <div class="team__cards-card_photo">
+                <img class="team_photo" src="@@webRoot/img/Team/TeamPhoto-4.jpg" alt="man">
+              </div>
+              <div class="team__cards-card_text">
+                <a class="suptitle" href="#">команда</a>
+                <h2 class="gradient_title">Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну
+                  допомогу, навіть у ситуаціях, коли більшість безсилі.</h2>
+                <div class="full_name">Олександр Олександровський</div>
+                <div class="job_title">Керуючий партнер</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="cards-pagination"></div>
+
+      </div>
+    </section>
+
+    @@include('sections/clients.html')
+
+    <div class="recommended__homepage">
+      @@include('sections/recommended.html')
+    </div>
+
+
+  </main>
+
+  @@include('sections/footer.html')
+  @@include('sections/icons.html')
+
+  <script src="@@webRoot/js/menu.min.js"></script>
+  <script src="@@webRoot/js/swiper-bundle.min.js"></script>
+  <script src="@@webRoot/js/teams-slider.min.js"></script>
+
+</body>
+
+</html>

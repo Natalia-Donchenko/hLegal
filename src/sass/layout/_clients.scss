@@ -1,0 +1,97 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use "sass:math";
+
+.clients {
+  overflow-x: hidden;
+
+  & .container {
+    padding-top: calc($baseIndent / 2);
+  }
+
+  &__title-text {
+    margin-bottom: calc($baseIndent / 2);
+
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    margin-right: math.div(-$baseIndent, 2);
+    margin-left: math.div(-$baseIndent, 2);
+    grid-template-columns: 1fr;
+
+    @include tablet-sd {
+      margin-right: -$baseIndent;
+      margin-left: -$baseIndent;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include tablet-hd {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &-item {
+      display: flex;
+      height: 120px;
+      justify-content: center;
+      align-items: center;
+
+      &:nth-last-child(-n+6) {
+        display: none;
+
+        @include tablet-sd {
+          display: flex;
+        }
+      }
+    }
+
+    & .client_hillel {
+      background: #1C4280;
+    }
+
+    & .client_wanna_biz {
+      background: #143646;
+    }
+
+    & .client_tapgerine {
+      background: linear-gradient(0deg, #F48B30, #F48B30), #F48B30;
+    }
+
+    & .client_3d_look {
+      background: #9E4DC3;
+    }
+
+    & .client_orangear {
+      background: #FD9339;
+    }
+
+    & .client_adtellige {
+      background: #E2E2E4;
+    }
+
+    & .client_clickky {
+      background: #C71C36;
+    }
+
+    & .client_eco_leasing {
+      background: #DCF3F9;
+    }
+
+    & .client_infatek {
+      background: #EAEAEA;
+    }
+
+    & .client_city_park {
+      background: #282240;
+    }
+
+    & .client_art_prints {
+      background: #1D4568;
+    }
+
+    & .client_ultimate {
+      background: #000000;
+    }
+  }
+}

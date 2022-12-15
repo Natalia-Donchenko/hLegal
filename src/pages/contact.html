@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="@@webRoot/css/main.min.css" />
+</head>
+
+<body>
+  <div class="contact-header__wrapper">
+    <div class="container">
+      <div class="contact-header white-header">
+        @@include('../sections/header.html')
+      </div>
+    </div>
+  </div>
+
+  <main class="main">
+    <div class="contacts__wrapper">
+      <div class="container">
+        <div class="comunication">
+          <div class="contacts">
+            <a class="adress"
+              href="https://www.google.com/maps/place/%D1%83%D0%BB.+%D0%9C%D0%B5%D1%87%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%D0%B0,+14%2F1,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.436795,30.532705,17z/data=!3m1!4b1!4m6!3m5!1s0x40d4cf07295b8e39:0x17b2112e2dc0e7a!8m2!3d50.436795!4d30.532705!16s%2Fg%2F11c5mrd800"
+              target="_blank">Kyiv, <br>
+              Mechnikova str, 14/1</a>
+            <div class="contacts__connection">
+              <a class="call" href="tel:0800211927">0800 211 927</a>
+              <a class="mail" href="mailto:contact@forstudy.space">contact@forstudy.space</a>
+            </div>
+            <div class="contacts__fb-link">
+              <a class="fb-link" href="https://www.facebook.com/" target="_blank">
+                <svg class="fb_icon" viewBox="0 0 39 38">
+                  <use xlink:href="#fb_icon"></use>
+                </svg>Our page on facebook
+              </a>
+            </div>
+          </div>
+
+          <section class="form">
+            <h2 class="gradient_title">We would like to help you</h2>
+            <form class="form__help" method="POST" action="https://fom.in.ua/echo" autocomplete="off">
+              <div class="form__help-massage">
+                <input class="form__help-item" type="text" name="name" placeholder="Name" required>
+                <textarea class="form__help-item form__help-textarea" name="message" style="resize:none" placeholder="Message" required></textarea>
+              </div>
+              <div class="form__help-feedback">
+                <span class="form__help-text">How to answer you?</span>
+                <input class="form__help-item" type="tel" name="phone_number" placeholder="Phone number" required>
+                <input class="form__help-item" type="email" name="login" placeholder="Email" required>
+              </div>
+              <button class="form__help-btn" type="submit">Send message</button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  @@include('../sections/footer.html')
+
+  @@include('../sections/icons.html')
+
+  <script src="@@webRoot/js/menu.min.js"></script>
+</body>
+
+</html>

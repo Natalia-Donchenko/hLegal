@@ -1,0 +1,34 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+@use "sass:math";
+
+.publication__recommended {
+  margin-top: -50px;
+  padding-top: 107px;
+
+  .recommended {
+    & .container {
+      padding-bottom: $baseIndent;
+    }
+  }
+
+  @include tablet-sd {
+    padding-top: 280px;
+  }
+
+  @include tablet-hd {
+    padding-top: 166px;
+  }
+
+  @include desktop-sd {
+    padding-top: 176px;
+  }
+
+  @include desktop-hd {
+    padding-top: 166px;
+  }
+
+  .recommended__title {
+    display: none;
+  }
+}

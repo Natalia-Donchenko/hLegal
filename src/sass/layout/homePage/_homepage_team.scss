@@ -1,0 +1,131 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+@use "sass:math";
+
+.team {
+
+  &__cards {
+    padding-top: 50px;
+    align-items: stretch;
+
+    @include tablet-sd {
+      padding-top: 80px;
+    }
+
+    &-card {
+      display: flex;
+      height: auto;
+      padding: calc($baseIndent / 2);
+      flex-direction: column;
+      overflow: hidden;
+      object-fit: contain;
+
+      background: $grey-color-bg;
+      border-radius: 12px;
+
+      @include tablet-hd {
+        flex-direction: row;
+        gap: calc($baseIndent / 2);
+      }
+
+      &_photo {
+        display: flex;
+        margin-top: math.div(-$baseIndent, 2);
+        margin-bottom: calc($baseIndent / 2);
+        margin-left: -$baseIndent;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(calc($baseIndent / 2));
+
+        overflow: hidden;
+
+        @include tablet-sd {
+          max-height: 500px;
+          margin-left: math.div(-$baseIndent, 2);
+        }
+
+        @include tablet-hd {
+          max-height: 528px;
+          margin-top: -$baseIndent;
+          margin-bottom: 0;
+          flex: 1 1;
+          transform: translateY(calc($baseIndent / 2));
+        }
+
+        @include desktop-sd {
+          max-height: 344px;
+          flex-grow: 1;
+        }
+
+        @include desktop-hd {
+          max-height: 298px;
+        }
+
+        & .team_photo {
+          width: calc(100% + calc($baseIndent * 2));
+          object-fit: cover;
+
+          @include tablet-sd {
+            max-height: 500px;
+          }
+
+          @include tablet-hd {
+            max-height: 528px;
+          }
+
+          @include desktop-sd {
+            max-height: 344px;
+          }
+
+          @include desktop-hd {
+            max-height: 298px;
+          }
+        }
+      }
+
+      &_text {
+        overflow-wrap: break-word;
+
+        @include tablet-hd {
+          display: flex;
+          flex: 1 1;
+          flex-direction: column;
+        }
+
+        @include desktop-sd {
+          flex-grow: 2;
+        }
+
+        @include desktop-hd {
+          flex-grow: 3;
+        }
+      }
+
+      &_text .suptitle {
+        margin-bottom: 5px;
+      }
+
+      &_text h2 {
+        margin-bottom: calc($baseIndent / 2);
+      }
+
+      &_text .full_name {
+        margin-bottom: calc($baseIndent / 10);
+      }
+    }
+  }
+}
+
+.cards-pagination {
+  margin-top: calc($baseIndent / 2);
+  margin-bottom: calc($baseIndent / 2);
+
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+
+  background-color: $active-color-regular;
+}
